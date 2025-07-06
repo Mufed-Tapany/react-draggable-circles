@@ -1,5 +1,6 @@
 import Draggable from 'react-draggable';
 import type { CircleDraggableProps } from '../types';
+import '../style/index.css';
 
 export const CircleDraggable = ({ id, x, y, onDrag, nodeRef }: CircleDraggableProps) => {
 	return (

@@ -1,4 +1,5 @@
 import type { CircleInputProps } from '../types';
+import '../style/index.css';
 
 export const CircleInput = ({ id, x, y, onChangeX, onChangeY }: CircleInputProps) => {
 	return (
