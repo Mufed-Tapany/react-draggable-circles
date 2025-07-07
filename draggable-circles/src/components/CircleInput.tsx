@@ -4,25 +4,23 @@ import '../style/index.css';
 export const CircleInput = ({ id, x, y, onChangeX, onChangeY }: CircleInputProps) => {
 	return (
 		<div className="circle-input-wrapper">
-			<strong>Circle {id.slice(0, 2)}:</strong>
-			<label style={{ marginLeft: 10 }}>
-				X:
+			<span className="circle-input-label">Circle {id.slice(0, 2)}</span>
+			<div className="circle-input-fields">
 				<input
 					type="number"
 					value={x}
-					onChange={(e) => onChangeX(id, Number.parseFloat(e.target.value))}
+					onChange={(e) => onChangeX(id, parseFloat(e.target.value))}
+					placeholder="X"
 					className="circle-input"
 				/>
-			</label>
-			<label style={{ marginLeft: 10 }}>
-				Y:
 				<input
 					type="number"
 					value={y}
-					onChange={(e) => onChangeY(id, Number.parseFloat(e.target.value))}
+					onChange={(e) => onChangeY(id, parseFloat(e.target.value))}
+					placeholder="Y"
 					className="circle-input"
 				/>
-			</label>
+			</div>
 		</div>
 	);
 };
