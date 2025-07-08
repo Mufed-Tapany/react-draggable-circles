@@ -1,5 +1,6 @@
 import React, { useState, useRef, useCallback } from 'react';
 import type { DraggableEvent } from 'react-draggable';
+import { ToastContainer, toast } from 'react-toastify';
 import { v4 as uuidv4 } from 'uuid';
 import { CircleDraggable } from '../components/CircleDraggable';
 import { CircleInput } from '../components/CircleInput';
@@ -69,6 +70,8 @@ export const MainPage = () => {
 
 		setCircles([]);
 		setSelectedMaterial(null);
+
+		toast.success('Submitted successfully!');
 	}, [circles, selectedMaterial]);
 
 	return (
@@ -89,6 +92,7 @@ export const MainPage = () => {
 				<button disabled={circles.length === 0} type="submit" className="submit-button" onClick={handleSubmit}>
 					Submit
 				</button>
+				<ToastContainer position="top-center" />
 			</div>
 
 			<div className="right-panel">
